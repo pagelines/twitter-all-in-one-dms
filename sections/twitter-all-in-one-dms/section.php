@@ -10,7 +10,7 @@ Description: Combines all four Twitter widgets: User timeline, Favorites, List, 
 Class Name: TwitterAllInOneDMS
 Workswith: templates, main, sidebar1, sidebar2, sidebar_wrap, header, footer, morefoot
 Cloning: true
-Filter: component
+Filter: social
 PageLines: true
 v3: true
 */
@@ -80,7 +80,7 @@ class TwitterAllInOneDMS extends PageLinesSection {
 				array(
 		   	   		'key'	=> 'twexcludereplies',
 		   	    	'type'	=>  'check',
-					'label'	=> __( 'Exclude replies', 'twitter-all-in-one-dms' )
+					'label'	=> __( 'Exclude your replies to other users', 'twitter-all-in-one-dms' )
 		   	    ));
 				} else { $Preferences_A = array(); }
 				if ($mode == 'search') {
@@ -122,23 +122,23 @@ class TwitterAllInOneDMS extends PageLinesSection {
 				array(
 	    	   		'key'	=> 'twnoheader',
 	    	    	'type'	=>  'check',
-					'label'	=> __( 'Hide Header', 'twitter-all-in-one-dms' )
+					'label'	=> __( 'Hide header', 'twitter-all-in-one-dms' )
 	    	    ),
 				array(
 	    	   		'key'	=> 'twnofooter',
 	    	    	'type'	=> 'check',
-					'label'	=> __( 'Hide Footer', 'twitter-all-in-one-dms' )
+					'label'	=> __( 'Hide footer', 'twitter-all-in-one-dms' )
 				),
 				array(
 	    	   		'key'	=> 'twtransparent',
 	    	    	'type'	=> 'check',
-					'label'	=> __( 'Remove Background Color', 'twitter-all-in-one-dms' )
+					'label'	=> __( 'Remove background color', 'twitter-all-in-one-dms' )
 				),
 				array(
 	    	   		'key'	=> 'twbordercolor',
 	    	    	'default'	=> '#444444',
 					'type'	=> 'color',
-					'label'	=> __( 'Border Color', 'twitter-all-in-one-dms' )
+					'label'	=> __( 'Border color', 'twitter-all-in-one-dms' )
 				),
 				array(
 	    	   		'key'	=> 'twlinks',
