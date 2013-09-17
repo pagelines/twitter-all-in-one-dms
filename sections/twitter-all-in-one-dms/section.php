@@ -33,7 +33,6 @@ class TwitterAllInOneDMS extends PageLinesSection {
 								'list'		=> array('name' => __( 'List', 'twitter-all-in-one-dms' )),
 								'search'	=> array('name' => __( 'Search', 'twitter-all-in-one-dms' ))
 				)));	
-
 		$mode = ($this->opt('twmode')) ? $this->opt('twmode') : '';
 			
 				if (($mode == 'timeline') || ($mode == 'favorites')){
@@ -114,67 +113,59 @@ class TwitterAllInOneDMS extends PageLinesSection {
 				'type'	=> 'multi',
 				'opts'	=> $Preferences_C
 			);
-			
-			
-			
-			
 		$Appearance_A = array(
-			array(
-    	   		'key'	=> 'twdarktheme',
-    	    	'type'	=>  'check',
-				'label'	=> __( 'Switch to dark theme',	 'twitter-all-in-one-dms' )
-    	    ),
-			array(
-    	   		'key'	=> 'twnoheader',
-    	    	'type'	=>  'check',
-				'label'	=> __( 'Hide Header', 'twitter-all-in-one-dms' )
-    	    ),
-			array(
-    	   		'key'	=> 'twnofooter',
-    	    	'type'	=> 'check',
-				'label'	=> __( 'Hide Footer', 'twitter-all-in-one-dms' )
-			),
-			array(
-    	   		'key'	=> 'twtransparent',
-    	    	'type'	=> 'check',
-				'label'	=> __( 'Remove Background Color', 'twitter-all-in-one-dms' )
-			),
-			array(
-    	   		'key'	=> 'twbordercolor',
-    	    	'default'	=> '#444444',
-				'type'	=> 'color',
-				'label'	=> __( 'Border Color', 'twitter-all-in-one-dms' )
-			),
-			array(
-    	   		'key'	=> 'twlinks',
-    	    	'default'	=> '#0084b4',
-				'type'	=> 'color',
-				'label'	=> __( 'Link Color', 'twitter-all-in-one-dms' )
-			),
-			array(
-    	   		'key'	=> 'twnoborders',
-    	    	'type'	=> 'check',
-				'label'	=> __( 'Remove all borders', 'twitter-all-in-one-dms' )
-			));
-			
-
-					if(!$this->opt( 'twnumberoftweets' )){
-			$Appearance_B = array(
-			
-			array(
-			    	   		'key'	=> 'twheight',
-							'default'	=> '600',
-			    	    	'type'	=> 'text',
-							'label'	=> __( 'Section Height (default is 600 px)', 'twitter-all-in-one-dms' )
-			));
-				} else { $Appearance_B = array(); }
-			$Appearance_C = array_merge( $Appearance_A, $Appearance_B );
-		$options[] = array(
-				'title' => __( 'Appearance', 'twitter-all-in-one-dms' ),
-				'type'	=> 'multi',
-				'opts'	=> $Appearance_C
-		
-			);
+				array(
+	    	   		'key'	=> 'twdarktheme',
+	    	    	'type'	=>  'check',
+					'label'	=> __( 'Switch to dark theme',	 'twitter-all-in-one-dms' )
+	    	    ),
+				array(
+	    	   		'key'	=> 'twnoheader',
+	    	    	'type'	=>  'check',
+					'label'	=> __( 'Hide Header', 'twitter-all-in-one-dms' )
+	    	    ),
+				array(
+	    	   		'key'	=> 'twnofooter',
+	    	    	'type'	=> 'check',
+					'label'	=> __( 'Hide Footer', 'twitter-all-in-one-dms' )
+				),
+				array(
+	    	   		'key'	=> 'twtransparent',
+	    	    	'type'	=> 'check',
+					'label'	=> __( 'Remove Background Color', 'twitter-all-in-one-dms' )
+				),
+				array(
+	    	   		'key'	=> 'twbordercolor',
+	    	    	'default'	=> '#444444',
+					'type'	=> 'color',
+					'label'	=> __( 'Border Color', 'twitter-all-in-one-dms' )
+				),
+				array(
+	    	   		'key'	=> 'twlinks',
+	    	    	'default'	=> '#0084b4',
+					'type'	=> 'color',
+					'label'	=> __( 'Link Color', 'twitter-all-in-one-dms' )
+				),
+				array(
+	    	   		'key'	=> 'twnoborders',
+	    	    	'type'	=> 'check',
+					'label'	=> __( 'Remove all borders', 'twitter-all-in-one-dms' )
+				));
+						if(!$this->opt( 'twnumberoftweets' )){
+				$Appearance_B = array(
+				array(
+				    	   		'key'	=> 'twheight',
+								'default'	=> '600',
+				    	    	'type'	=> 'text',
+								'label'	=> __( 'Section Height (default is 600 px)', 'twitter-all-in-one-dms' )
+				));
+					} else { $Appearance_B = array(); }
+				$Appearance_C = array_merge( $Appearance_A, $Appearance_B );
+			$options[] = array(
+					'title' => __( 'Appearance', 'twitter-all-in-one-dms' ),
+					'type'	=> 'multi',
+					'opts'	=> $Appearance_C
+				);
 			}
 		return $options;
 	}
