@@ -16,5 +16,8 @@ This allows you to easily insert Twitter feeds into DMS site with ease. Miss the
 
 == Changelog ==
 
+= 1.0.1 =
+* Custom language support
+
 = 1.0.0 =
 * Initial release
