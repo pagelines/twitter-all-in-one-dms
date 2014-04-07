@@ -5,7 +5,7 @@ Author: MrFent
 Author URI: http://www.MrFent.com/twitter-all-in-one
 Demo: http://www.MrFent.com/twitter-all-in-one
 External: http://www.MrFent.com/twitter-all-in-one
-Version: 1.0.1
+Version: 1.1.0
 Description: Combines all four Twitter widgets: User timeline, Favorites, List, & Search
 Class Name: TwitterAllInOneDMS
 Workswith: templates, main, sidebar1, sidebar2, sidebar_wrap, header, footer, morefoot
@@ -88,8 +88,8 @@ class TwitterAllInOneDMS extends PageLinesSection {
 				array(
 	    	   		'key'	=> 'twnumberoftweets',
 	    	    	'type' 	=> 'count_select',
-					'count_start'	=> '1',
-					'count_number'	=> '20',
+					'count_start'	=> 1,
+					'count_number'	=> 20,
 					'label' => __( 'Number of Tweets', 'twitter-all-in-one-dms' )
 				));
 				} else {
@@ -102,8 +102,8 @@ class TwitterAllInOneDMS extends PageLinesSection {
 				array(
 	    	   		'key'	=> 'twnumberoftweets',
 	    	    	'type' 	=> 'count_select',
-					'count_start'	=> '1',
-					'count_number'	=> '20',
+					'count_start'	=> 1,
+					'count_number'	=> 20,
 					'label' => __( 'Number of Tweets', 'twitter-all-in-one-dms' )
 				));	
 				}
